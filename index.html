@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Example</title>
     <script>
-        function redirect(){
-            window.open("https://www.minecraft.net/");
-            window.open("https://www.roblox.com/");
-            window.open("https://www.fortnite.com/");
+        function redirect() {
+            // Open each URL in a new tab
+            openInNewTab("http://www.example.com/a");
+            openInNewTab("http://www.example.com/b");
+            openInNewTab("http://www.example.com/c");
+        }
+
+        function openInNewTab(url) {
+            var newWindow = window.open(url, '_blank');
+            newWindow.focus();
         }
     </script>
 </head>
 <body onload="redirect()">
+    <!-- You can add content here if needed -->
 </body>
 </html>
